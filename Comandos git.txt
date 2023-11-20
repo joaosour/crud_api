@@ -1,0 +1,43 @@
+#1. CRIAR UMA CÓPIO DE UM REPOSITÓRIO git
+
+#O que ele faz?
+# a. Download (cópia) do repositório remoto
+# b. Configuração automática do Remote
+# c. Cria uma branch local chamada 'main' (ou outra branch padrão definida no repositoróio)
+
+$ git clone <url do repositorio>
+
+2. VERIFICAR SE VOCÊ POSSUI AS ALTERAÇÕES MAIS RECENTES EXISTENTES NO REPOSITÓRIO ONLINE
+
+# O que ele faz?
+# a. Este comando baixa as últimas alterações do repositório remoto para o local, mas não mescla automaticamente essas alterações, assim é possível revisar antes de integrá-las.
+
+$ git fetch origin
+
+# 3. VERIFICAR SE ESTOU ATRÁS DAS ALTERAÇÕES REMOTAS
+
+# O que ele faz?
+# a. Informa se estou atrás das alterações remotas, mostrando se há necessidade de fazer um pull
+
+$ git status
+
+# 4. BAIXAR E MESCLAR AS ALTERAÇÕES MAIS RECENTES
+# O que ele faz?
+# a. É a combinação dos comandos fetch e merge, pois faz o trabalho dos dois, verifica se existem alterações e mescla automaticamente na branch local.
+
+$ git push origin main
+
+# 5. DETALHAR AS ALTERAÇÕES RECENTES NO REPOSITÓRIO REMOTO
+
+# O que ele faz?
+# a. Mostra a log de alterações que foram resumidas pelo fetch.
+
+$ git log origin/main
+
+# 6. VERIFICAR DIFERENÇA ENTRE AS BRANCHS LOCAL E REMOTA ANTES DE MESCLAR
+
+$ git diff main..origin/main
+
+# 7 - RESTAURA TODAS AS MOFICAÇÕES LOCAIS DESTE O ÚLTIMO pull
+
+$ git reset --hard HEAD
